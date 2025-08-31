@@ -51,11 +51,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="text-center  max-sm:p-5 lg:p-8">
-        <h1 className="text-2xl md:text-3xl flex gap-2 font-bold text-gray-800 mb-2">
+      <section className="text-center  max-sm:p-5 lg:p-8 max-w-7xl mx-auto">
+        <h1 className="text-2xl md:text-3xl flex justify-center gap-2 font-bold text-gray-800 mb-2">
           Welcome to Karachi <span className="block text-yellow-500 tracking-wider drop-shadow-[0_4px_6px_rgba(0,0,0,0.4)]">CNC</span>
         </h1>
-        <p className="text-sm md:text-base text-gray-600 max-w-7xl mx-auto">
+        <p className="text-sm md:text-base text-gray-600 ">
           Karachi CNC specializes in precision cutting, custom fabrication, and high-quality CNC solutions for all your industrial and creative needs.
         </p>
       </section>
@@ -98,7 +98,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto pb-12 bg-white">
+      <section className="max-w-7xl mx-auto py-10 bg-white">
         <div className="grid lg:grid-cols-2 gap-8 p-5 items-center">
           <div className="space-y-3">
             <h2 className="text-2xl font-bold text-gray-800">50+ Beautiful Wood Designs for Your Home</h2>
@@ -133,7 +133,7 @@ export default function Home() {
             <span key={index} onClick={() => setCurrent(index)} className={`w-3 h-3 rounded-full cursor-pointer ${index === current ? "bg-yellow-500" : "bg-gray-300"}`}></span>
           ))}
         </div>
-        <div className="bg-gray-50  flex flex-col items-center px-4 pt-10">
+        <div className=" flex flex-col items-center px-4 pt-10">
           <div className="text-center mb-12 max-w-2xl">
             <h1 className="text-2xl font-bold text-gray-800 mb-4">Contact Us</h1>
             <p className="text-gray-600 text-md">Reach out to us anytime. You can call us on WhatsApp or visit our shop.</p>
