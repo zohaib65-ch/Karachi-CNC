@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ProductCard from "../components/ProductCard";
-
+import MirrorsImg from "../../public/images/wood-mirrors.jpg";
 import CeilingImg from "../../public/images/wood-ceiling.jpg";
 import WoodWallImg from "../../public/images/wood-walls.png";
 import WoodsBoardsImg from "../../public/images/woods-boards.png";
@@ -10,11 +10,13 @@ import DoorsImg from "../../public/images/wooden-door.png";
 import SofasImg from "../../public/images/wooden-sofas.webp";
 import WindowsImg from "../../public/images/wooden_window.webp";
 import { Link } from "react-router-dom";
+import { MapPin, Phone } from "lucide-react";
 
 export default function Home() {
   const slides = [
     { id: 1, img: CeilingImg, title: "Wood Ceiling", label: "High-quality timber and woodwork" },
     { id: 2, img: WoodWallImg, title: "Wood Walls", label: "Handcrafted wooden wall solutions" },
+
     { id: 3, img: WoodsBoardsImg, title: "Wood Boards", label: "Premium quality wooden boards" },
     { id: 4, img: BedsImg, title: "Beds", label: "Handcrafted premium wooden beds" },
     { id: 5, img: DoorsImg, title: "Doors", label: "Custom handcrafted wooden doors" },
@@ -49,15 +51,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="text-center p-8 py-12">
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Welcome to Karachi CNC</h1>
+      <section className="text-center  max-sm:p-5 lg:p-8">
+        <h1 className="text-2xl md:text-3xl flex gap-2 font-bold text-gray-800 mb-2">
+          Welcome to Karachi <span className="block text-yellow-500 tracking-wider drop-shadow-[0_4px_6px_rgba(0,0,0,0.4)]">CNC</span>
+        </h1>
         <p className="text-sm md:text-base text-gray-600 max-w-7xl mx-auto">
           Karachi CNC specializes in precision cutting, custom fabrication, and high-quality CNC solutions for all your industrial and creative needs.
         </p>
       </section>
 
-      <section className="bg-gray-50 py-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 p-8 max-w-7xl mx-auto">
+      <section className="bg-gray-50">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 p-5 max-w-7xl mx-auto">
           <Link to="/all-products">
             <ProductCard name="All Products" desc="Browse all furniture and wood products." image={AllProductImg} />
           </Link>
@@ -68,20 +72,23 @@ export default function Home() {
           <Link to="/wood-walls">
             <ProductCard name="Wood walls" desc="Handcrafted wooden wall solutions" image={WoodWallImg} />
           </Link>
+          <Link to="/wood-mirror">
+            <ProductCard name="Wood Mirrors" desc="Stylish and modern mirrors" image={MirrorsImg} />
+          </Link>
           <Link to="/boards">
-            <ProductCard name="Boards" desc="Premium quality wooden boards" image={WoodsBoardsImg} />
+            <ProductCard name="Wood Boards" desc="Premium quality wooden boards" image={WoodsBoardsImg} />
           </Link>
           <Link to="/beds">
-            <ProductCard name="Beds" desc="Handcrafted premium wooden beds" image={BedsImg} />
+            <ProductCard name="Wood Beds" desc="Handcrafted premium wooden beds" image={BedsImg} />
           </Link>
           <Link to="/doors">
-            <ProductCard name="Doors" desc="Custom handcrafted wooden doors" image={DoorsImg} />
+            <ProductCard name="Wood Doors" desc="Custom handcrafted wooden doors" image={DoorsImg} />
           </Link>
           <Link to="/sofas">
-            <ProductCard name="Sofas" desc="High-quality wooden furniture sofas" image={SofasImg} />
+            <ProductCard name="Wood Sofas" desc="High-quality wooden furniture sofas" image={SofasImg} />
           </Link>
           <Link to="/windows">
-            <ProductCard name="Windows" desc="Elegant wooden windows for interiors" image={WindowsImg} />
+            <ProductCard name="Wood Windows" desc="Elegant wooden windows for interiors" image={WindowsImg} />
           </Link>
         </div>
         <div className="flex justify-center ">
@@ -92,11 +99,14 @@ export default function Home() {
       </section>
 
       <section className="max-w-7xl mx-auto pb-12 bg-white">
-        <div className="grid lg:grid-cols-2 gap-8 p-8 items-center">
-          <div className="space-y-6 p-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">50+ Beautiful Wood Designs for Your Home</h2>
+        <div className="grid lg:grid-cols-2 gap-8 p-5 items-center">
+          <div className="space-y-3">
+            <h2 className="text-2xl font-bold text-gray-800">50+ Beautiful Wood Designs for Your Home</h2>
             <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-              At <strong>Karachi CNC</strong>, we craft stunning wooden prototypes and designs to inspire your spaces.
+              <strong className="font-bold flex gap-1">
+                At Karachi <span className="block text-yellow-500 tracking-wider drop-shadow-[0_4px_6px_rgba(0,0,0,0.4)]"> CNC</span>
+              </strong>
+              we craft stunning wooden prototypes and designs to inspire your spaces.
             </p>
           </div>
 
@@ -122,6 +132,40 @@ export default function Home() {
           {slides.map((_, index) => (
             <span key={index} onClick={() => setCurrent(index)} className={`w-3 h-3 rounded-full cursor-pointer ${index === current ? "bg-yellow-500" : "bg-gray-300"}`}></span>
           ))}
+        </div>
+        <div className="bg-gray-50  flex flex-col items-center px-4 pt-10">
+          <div className="text-center mb-12 max-w-2xl">
+            <h1 className="text-2xl font-bold text-gray-800 mb-4">Contact Us</h1>
+            <p className="text-gray-600 text-md">Reach out to us anytime. You can call us on WhatsApp or visit our shop.</p>
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-8 w-full max-w-3xl justify-center">
+            <a
+              href="https://wa.me/+923331234227"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 bg-white p-4 rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1 text-center"
+            >
+              <div className="bg-green-50 w-14 h-14 mx-auto flex items-center justify-center rounded-full mb-4">
+                <Phone className="text-green-600" size={25} />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Phone / WhatsApp</h3>
+              <p className="text-gray-600">+92 333 1234227</p>
+            </a>
+
+            <a
+              href="https://www.google.com/maps?rlz=1C1OPNX_enPK1138PK1139&gs_lcrp=EgZjaHJvbWUqCQgBECEYChigATIGCAAQRRg5MgkIARAhGAoYoAEyCQgCECEYChigATIHCAMQIRiPAjIHCAQQIRiPAjIHCAUQIRiPAtIBCTIyMzQzajBqN6gCALACAA&um=1&ie=UTF-8&fb=1&gl=pk&sa=X&geocode=KeHnrTzTDyM5McOuvCxKx2Ik&daddr=XF9F%2B3MX,+Zubaida+Masjid+Rd,+City,+Toba+Tek+Singh,+36050"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 bg-white p-4 rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1 text-center"
+            >
+              <div className="bg-blue-50 w-14 h-14 mx-auto flex items-center justify-center rounded-full mb-4">
+                <MapPin className="text-blue-600" size={25} />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Shop Location</h3>
+              <p className="text-gray-600">Zubaida Masjid Road, opposite Ali Store, Toba Tek Singh</p>
+            </a>
+          </div>
         </div>
       </section>
     </div>

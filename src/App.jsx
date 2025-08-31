@@ -12,6 +12,7 @@ import WoodWalls from "./pages/WoodWalls/WoodWalls.jsx";
 import Ceiling from "./pages/Ceiling/Ceiling.jsx";
 import Boards from "./pages/Boards/Boards.jsx";
 import AllProducts from "./pages/AllProducts.jsx";
+import Mirror from "./pages/Mirror/mirror.jsx";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/beds" element={<Beds />} />
           <Route path="/windows" element={<Windows />} />
           <Route path="/wood-walls" element={<WoodWalls />} />
+          <Route path="/wood-mirror" element={<Mirror />} />
           <Route path="/ceiling" element={<Ceiling />} />
           <Route path="/boards" element={<Boards />} />
           <Route path="/contact" element={<Contact />} />
